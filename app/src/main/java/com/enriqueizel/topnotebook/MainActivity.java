@@ -38,5 +38,11 @@ public class MainActivity extends AppCompatActivity {
         }
       }
     });
+
+    String annotation = preference.getAnnotation();
+
+    if (!annotation.isEmpty()) {
+      editAnnotation.setText(annotation);
+    }
   }
 }
