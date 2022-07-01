@@ -17,10 +17,12 @@ public class AnnotationPreference {
     editor = preferences.edit();
   }
 
-  public void saveAnnotation(String annotation){
+  public void saveAnnotation(String annotation) {
     editor.putString(KEY_NAME, annotation);
     editor.commit();
   }
 
-  public void getAnnotation(){}
+  public String getAnnotation() {
+    return preferences.getString(KEY_NAME, "");
+  }
 }
